@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-        {{- partial "head.html" . }}
+{{ partial "head.html" . }}
     </head>
     <body>
         <script>
@@ -15,14 +15,14 @@
             window.isDark && document.body.classList.add('dark-theme');
         </script>
         <div class="wrapper">
-            {{ partial "header.html" . -}}
+{{ partial "header.html" . }}
             <main class="main">
                 <div class="container">
-                    {{ block "content" . }}{{ end -}}
+                    {{ block "content" . }}{{ end }}
                 </div>
             </main>
-            {{ partial "footer.html" . -}}
-            {{ partial "scripts.html" . -}}
+{{ partial "footer.html" . -}}
+{{ partial "scripts.html" . }}
         </div>
         <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
     </body>
